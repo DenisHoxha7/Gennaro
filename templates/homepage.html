@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New York City</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="navbar">
+        <h1>Welcome to New York City</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/history">History</a>
+            <a href="/attractions">Attractions</a>
+            <a href="/events">Events</a>
+        </nav>
+    </header>
+    <main>
+        <h2>New York: The City That Never Sleeps</h2>
+        <p>Discover the iconic landmarks, vibrant history, and exciting events of New York City.</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 New York City Website</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

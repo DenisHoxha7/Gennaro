@@ -1,0 +1,24 @@
+/* Generale */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Banner */
+.bg-hero {
+    background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c1c57?crop=entropy&cs=tinysrgb&w=1920&h=600&fit=crop');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Testo centrato */
+.text-center {
+    text-align: center;
+}
