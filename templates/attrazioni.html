@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attrazioni - New York</title>
+    <title>Attrazioni di New York</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <header class="navbar">
-        <h1>Attrazioni di New York</h1>
+        <h1>New York City</h1>
         <nav>
             <a href="/">Home</a>
             <a href="/storia">Storia</a>
@@ -17,8 +17,29 @@
         </nav>
     </header>
     <main>
-        <h2>Scopri le principali attrazioni di New York</h2>
-        <p>Luoghi imperdibili come la Statua della Libertà, Central Park e Times Square.</p>
+        <h2>Attrazioni di New York</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/statua liberta.jpg') }}" alt="Statua della Libertà">
+                <h3>Statua della Libertà</h3>
+                <p>Simbolo iconico di libertà, la Statua della Libertà è una delle attrazioni principali di New York.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/centralpark.jpg') }}" alt="Central Park">
+                <h3>Central Park</h3>
+                <p>Un'oasi verde nel cuore della città, perfetta per rilassarsi e passeggiare.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/timesquare.jpg') }}" alt="Times Square">
+                <h3>Times Square</h3>
+                <p>Il cuore pulsante di New York, famoso per i suoi schermi luminosi e il capodanno iconico.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/empirestate.jpg') }}" alt="Empire State Building">
+                <h3>Empire State Building</h3>
+                <p>Uno dei grattacieli più famosi al mondo, con una vista mozzafiato sulla città.</p>
+            </div>
+        </div>
     </main>
 </body>
 </html>

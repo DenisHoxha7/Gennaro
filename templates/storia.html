@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Storia - New York</title>
+    <title>Storia di New York</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <header class="navbar">
-        <h1>Storia di New York</h1>
+        <h1>New York City</h1>
         <nav>
             <a href="/">Home</a>
             <a href="/storia">Storia</a>
@@ -17,8 +17,24 @@
         </nav>
     </header>
     <main>
-        <h2>Momenti chiave della storia di New York</h2>
-        <p>Timeline e descrizioni degli eventi storici principali.</p>
+        <h2>La Storia di New York</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/oldnewyork.jpg') }}" alt="Vecchia New York">
+                <h3>New York nel passato</h3>
+                <p>Un viaggio nel tempo, esplorando le origini di una delle città più grandi del mondo.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/ellisisland.jpg') }}" alt="Immigrati a Ellis Island">
+                <h3>Ellis Island</h3>
+                <p>Il punto d'ingresso per milioni di immigrati, simbolo del sogno americano.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/costruzionegrattacieli.jpg') }}" alt="Costruzione grattacieli">
+                <h3>Costruzione dei Grattacieli</h3>
+                <p>Dall'Empire State Building al Chrysler Building, una storia di crescita verticale.</p>
+            </div>
+        </div>
     </main>
 </body>
 </html>

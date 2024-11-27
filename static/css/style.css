@@ -53,7 +53,7 @@ header.navbar nav a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url('/static/images/newyorkcityskyline.jpg') no-repeat center center/cover;
+    background: url('/static/images/newyorkskylinee.jpg') no-repeat center center/cover;
     color: #fff;
     text-align: center;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);

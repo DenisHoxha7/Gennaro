@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventi - New York</title>
+    <title>Eventi di New York</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <header class="navbar">
-        <h1>Eventi a New York</h1>
+        <h1>New York City</h1>
         <nav>
             <a href="/">Home</a>
             <a href="/storia">Storia</a>
@@ -17,11 +17,24 @@
         </nav>
     </header>
     <main>
-        <h2>Eventi imperdibili in città</h2>
-        <div id="events-container">
-            <!-- Event cards will be dynamically generated here -->
+        <h2>Eventi di New York</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/marathon.jpg') }}" alt="Maratona di New York">
+                <h3>Maratona di New York</h3>
+                <p>Un evento annuale che riunisce atleti da tutto il mondo.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/museomodernadellarte.jpg') }}" alt="Mostra d'arte">
+                <h3>Mostra d'Arte Moderna</h3>
+                <p>Un viaggio tra le opere più innovative del panorama artistico contemporaneo.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/broadway.jpeg') }}" alt="Spettacolo di Broadway">
+                <h3>Spettacoli di Broadway</h3>
+                <p>L'emozione del teatro dal vivo nella capitale mondiale dello spettacolo.</p>
+            </div>
         </div>
     </main>
-    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </body>
 </html>
