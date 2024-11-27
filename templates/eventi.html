@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New York City</title>
+    <title>Eventi - New York</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <header class="navbar">
-        <h1>New York City</h1>
+        <h1>Eventi a New York</h1>
         <nav>
             <a href="/">Home</a>
             <a href="/storia">Storia</a>
@@ -16,14 +16,12 @@
             <a href="/eventi">Eventi</a>
         </nav>
     </header>
-    <section class="hero">
-        <h2>Benvenuti a New York</h2>
-        <p>La città che non dorme mai</p>
-        <button>Scopri di più</button>
-    </section>
     <main>
-        <h2>Esplora la città</h2>
-        <p>New York offre esperienze uniche, dalla sua storia ricca di cultura alle sue attrazioni iconiche.</p>
+        <h2>Eventi imperdibili in città</h2>
+        <div id="events-container">
+            <!-- Event cards will be dynamically generated here -->
+        </div>
     </main>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </body>
 </html>
