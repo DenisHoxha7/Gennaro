@@ -8,33 +8,43 @@
 </head>
 <body>
     <header class="navbar">
-        <h1>New York City</h1>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/storia">Storia</a>
-            <a href="/attrazioni">Attrazioni</a>
-            <a href="/eventi">Eventi</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Eventi di New York</h2>
-        <div class="card-container">
-            <div class="card">
-                <img src="{{ url_for('static', filename='images/marathon.jpg') }}" alt="Maratona di New York">
-                <h3>Maratona di New York</h3>
-                <p>Un evento annuale che riunisce atleti da tutto il mondo.</p>
-            </div>
-            <div class="card">
-                <img src="{{ url_for('static', filename='images/museomodernadellarte.jpg') }}" alt="Mostra d'arte">
-                <h3>Mostra d'Arte Moderna</h3>
-                <p>Un viaggio tra le opere più innovative del panorama artistico contemporaneo.</p>
-            </div>
-            <div class="card">
-                <img src="{{ url_for('static', filename='images/broadway.jpeg') }}" alt="Spettacolo di Broadway">
-                <h3>Spettacoli di Broadway</h3>
-                <p>L'emozione del teatro dal vivo nella capitale mondiale dello spettacolo.</p>
-            </div>
+        <div class="container">
+            <h1 class="brand">New York City</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/storia">Storia</a></li>
+                    <li><a href="/attrazioni">Attrazioni</a></li>
+                    <li><a href="/eventi">Eventi</a></li>
+                </ul>
+            </nav>
         </div>
-    </main>
+    </header>
+
+    <section class="page-header">
+        <h2>Scopri gli Eventi di New York</h2>
+        <p>Concerti, festival, spettacoli e tanto altro nella città che non dorme mai.</p>
+    </section>
+
+    <section class="event-calendar">
+        <div class="container">
+            <div class="event-card">
+                <h3>Capodanno a Times Square</h3>
+                <p><strong>Data:</strong> 31 Dicembre</p>
+                <p><strong>Luogo:</strong> Times Square</p>
+                <p>Festeggia il nuovo anno con il famoso Ball Drop.</p>
+            </div>
+            <div class="event-card">
+                <h3>Maratona di New York</h3>
+                <p><strong>Data:</strong> 5 Novembre</p>
+                <p><strong>Luogo:</strong> Strade di New York</p>
+                <p>Un evento sportivo che attrae partecipanti da tutto il mondo.</p>
+            </div>
+            <div class="event-card">
+                <h3>Festival del Cinema di Tribeca</h3>
+                <p><strong>Data:</strong> Aprile</p>
+                <p><strong>Luogo:</strong> Tribeca</p>
+                <p>Un appuntamento imperdibile per gli amanti del cinema.</p>
+    </section>
 </body>
 </html>

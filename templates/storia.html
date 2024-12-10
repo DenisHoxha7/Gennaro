@@ -8,33 +8,37 @@
 </head>
 <body>
     <header class="navbar">
-        <h1>New York City</h1>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/storia">Storia</a>
-            <a href="/attrazioni">Attrazioni</a>
-            <a href="/eventi">Eventi</a>
-        </nav>
-    </header>
-    <main>
-        <h2>La Storia di New York</h2>
-        <div class="card-container">
-            <div class="card">
-                <img src="{{ url_for('static', filename='images/oldnewyork.jpg') }}" alt="Vecchia New York">
-                <h3>New York nel passato</h3>
-                <p>Un viaggio nel tempo, esplorando le origini di una delle città più grandi del mondo.</p>
-            </div>
-            <div class="card">
-                <img src="{{ url_for('static', filename='images/ellisisland.jpg') }}" alt="Immigrati a Ellis Island">
-                <h3>Ellis Island</h3>
-                <p>Il punto d'ingresso per milioni di immigrati, simbolo del sogno americano.</p>
-            </div>
-            <div class="card">
-                <img src="{{ url_for('static', filename='images/costruzionegrattacieli.jpg') }}" alt="Costruzione grattacieli">
-                <h3>Costruzione dei Grattacieli</h3>
-                <p>Dall'Empire State Building al Chrysler Building, una storia di crescita verticale.</p>
-            </div>
+        <div class="container">
+            <h1 class="brand">New York City</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/storia">Storia</a></li>
+                    <li><a href="/attrazioni">Attrazioni</a></li>
+                    <li><a href="/eventi">Eventi</a></li>
+                </ul>
+            </nav>
         </div>
-    </main>
+    </header>
+
+    <section class="page-header">
+        <h2>Scopri la Storia di New York</h2>
+        <p>Un viaggio attraverso secoli di trasformazioni.</p>
+    </section>
+
+    <section class="timeline">
+        <div class="container">
+            <div class="timeline-item">
+                <h3>1609</h3>
+                <p>Henry Hudson esplora il fiume Hudson e dà inizio alla storia moderna della città.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>1624</h3>
+                <p>Fondazione di New Amsterdam, l'insediamento olandese che diventerà New York.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>1898</h3>
+                <p>Nasce la "Greater New York", con la fusione dei distretti della città.</p>
+    </section>
 </body>
 </html>

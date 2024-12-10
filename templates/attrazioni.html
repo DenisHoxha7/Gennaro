@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,39 +7,56 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
+
     <header class="navbar">
-        <h1>New York City</h1>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/storia">Storia</a>
-            <a href="/attrazioni">Attrazioni</a>
-            <a href="/eventi">Eventi</a>
-        </nav>
+        <div class="container">
+            <h1 class="brand">New York City</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/storia">Storia</a></li>
+                    <li><a href="/attrazioni">Attrazioni</a></li>
+                    <li><a href="/eventi">Eventi</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <h2>Attrazioni di New York</h2>
-        <div class="card-container">
-            <div class="card">
+
+    <section class="page-header">
+        <h2>Le Attrazioni di New York</h2>
+    </section>
+
+    <section class="attractions-grid">
+        <div class="container">
+            <!-- Statua della Libertà -->
+            <div class="attraction-card">
                 <img src="{{ url_for('static', filename='images/statua liberta.jpg') }}" alt="Statua della Libertà">
                 <h3>Statua della Libertà</h3>
-                <p>Simbolo iconico di libertà, la Statua della Libertà è una delle attrazioni principali di New York.</p>
+                <p>Simbolo di libertà e di speranza, un must per ogni turista.</p>
             </div>
-            <div class="card">
+
+            <!-- Central Park -->
+            <div class="attraction-card">
                 <img src="{{ url_for('static', filename='images/centralpark.jpg') }}" alt="Central Park">
                 <h3>Central Park</h3>
-                <p>Un'oasi verde nel cuore della città, perfetta per rilassarsi e passeggiare.</p>
+                <p>Un polmone verde nel cuore di Manhattan, ideale per una passeggiata rilassante.</p>
             </div>
-            <div class="card">
+
+            <!-- Times Square -->
+            <div class="attraction-card">
                 <img src="{{ url_for('static', filename='images/timesquare.jpg') }}" alt="Times Square">
                 <h3>Times Square</h3>
-                <p>Il cuore pulsante di New York, famoso per i suoi schermi luminosi e il capodanno iconico.</p>
+                <p>Famoso per le sue luci al neon e l'energia che si respira.</p>
             </div>
-            <div class="card">
+
+            <!-- Empire State Building -->
+            <div class="attraction-card">
                 <img src="{{ url_for('static', filename='images/empirestate.jpg') }}" alt="Empire State Building">
                 <h3>Empire State Building</h3>
-                <p>Uno dei grattacieli più famosi al mondo, con una vista mozzafiato sulla città.</p>
+                <p>Una delle strutture più iconiche, da cui godere una vista mozzafiato della città.</p>
             </div>
         </div>
-    </main>
+    </section>
+
 </body>
 </html>

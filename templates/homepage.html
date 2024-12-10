@@ -5,21 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New York City</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="navbar">
-        <h1>New York City</h1>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/storia">Storia</a>
-            <a href="/attrazioni">Attrazioni</a>
-            <a href="/eventi">Eventi</a>
-        </nav>
+        <div class="container">
+            <h1 class="brand">New York City</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/storia">Storia</a></li>
+                    <li><a href="/attrazioni">Attrazioni</a></li>
+                    <li><a href="/eventi">Eventi</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <section class="hero">
-        <h2>Benvenuti a New York</h2>
-        <p>La città che non dorme mai</p>
-        <button onclick="location.href='/storia'" class="btn btn-primary">Scopri di più</button>
+
+    <section class="hero" style="background-image: url('{{ url_for('static', filename='images/newyorkskylinee.jpg') }}');">
+        <div class="overlay">
+            <h2>Benvenuti nella città che non dorme mai</h2>
+            <p>Esplora storia, attrazioni e eventi indimenticabili.</p>
+            <button onclick="location.href='/storia'">Scopri la Storia</button>
+        </div>
     </section>
+
 </body>
 </html>

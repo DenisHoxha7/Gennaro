@@ -1,21 +1,34 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const events = [
-        { name: "Maratona di New York", date: "2024-11-05", location: "Central Park" },
-        { name: "Mostra d'Arte Moderna", date: "2024-12-01", location: "MoMA" }
-    ];
+// Aggiunge una funzione per tornare in alto
+document.addEventListener('DOMContentLoaded', function () {
+    const backToTopButton = document.createElement('button');
+    backToTopButton.innerText = '↑ Torna su';
+    backToTopButton.id = 'backToTop';
+    backToTopButton.style.position = 'fixed';
+    backToTopButton.style.bottom = '20px';
+    backToTopButton.style.right = '20px';
+    backToTopButton.style.padding = '10px 15px';
+    backToTopButton.style.backgroundColor = '#007bff';
+    backToTopButton.style.color = '#fff';
+    backToTopButton.style.border = 'none';
+    backToTopButton.style.borderRadius = '5px';
+    backToTopButton.style.cursor = 'pointer';
+    backToTopButton.style.display = 'none';
+    document.body.appendChild(backToTopButton);
 
-    const eventsContainer = document.getElementById('events-container');
+    // Mostra o nasconde il pulsante in base alla posizione di scroll
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    });
 
-    events.forEach(event => {
-        const eventCard = document.createElement('div');
-        eventCard.classList.add('event-card');
-
-        eventCard.innerHTML = `
-            <h3>${event.name}</h3>
-            <p><strong>Data:</strong> ${event.date}</p>
-            <p><strong>Luogo:</strong> ${event.location}</p>
-        `;
-
-        eventsContainer.appendChild(eventCard);
+    // Scrolla verso l'alto quando cliccato
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 });
