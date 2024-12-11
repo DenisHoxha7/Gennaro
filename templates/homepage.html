@@ -4,32 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New York City</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="navbar">
+    <header class="navbar navbar-expand-lg navbar-dark" style="background-color: #1a1b41;">
         <div class="container">
-            <h1 class="brand">New York City</h1>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/storia">Storia</a></li>
-                    <li><a href="/attrazioni">Attrazioni</a></li>
-                    <li><a href="/eventi">Eventi</a></li>
+            <a class="navbar-brand" href="#">New York City</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/storia">Storia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/attrazioni">Attrazioni</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/eventi">Eventi</a>
+                    </li>
                 </ul>
-            </nav>
+            </div>
         </div>
     </header>
 
-    <section class="hero" style="background-image: url('{{ url_for('static', filename='images/newyorkskylinee.jpg') }}');">
-        <div class="overlay">
-            <h2>Benvenuti nella città che non dorme mai</h2>
-            <p>Esplora storia, attrazioni e eventi indimenticabili.</p>
-            <button onclick="location.href='/storia'">Scopri la Storia</button>
+    <section class="hero d-flex align-items-center justify-content-center text-center" style="background-image: url('{{ url_for('static', filename='images/newyorkskylinee.jpg') }}'); height: 100vh; background-size: cover;">
+        <div class="overlay p-4" style="background: rgba(0, 0, 0, 0.5);">
+            <h2 class="text-white display-3">Benvenuti nella città che non dorme mai</h2>
+            <p class="text-white">Esplora storia, attrazioni e eventi indimenticabili.</p>
+            <a href="/storia" class="btn btn-danger btn-lg">Scopri la Storia</a>
         </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

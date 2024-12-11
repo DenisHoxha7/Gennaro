@@ -4,59 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attrazioni di New York</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-
-    <header class="navbar">
+    <header class="navbar navbar-expand-lg navbar-dark" style="background-color: #1a1b41;">
         <div class="container">
-            <h1 class="brand">New York City</h1>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/storia">Storia</a></li>
-                    <li><a href="/attrazioni">Attrazioni</a></li>
-                    <li><a href="/eventi">Eventi</a></li>
+            <a class="navbar-brand" href="#">New York City</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/storia">Storia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/attrazioni">Attrazioni</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/eventi">Eventi</a>
+                    </li>
                 </ul>
-            </nav>
+            </div>
         </div>
     </header>
 
-    <section class="page-header">
-        <h2>Le Attrazioni di New York</h2>
+    <section class="page-header text-center py-5" style="background-color: #1a1b41;">
+        <h2 class="text-white">Le Attrazioni di New York</h2>
     </section>
 
-    <section class="attractions-grid">
+    <section class="attractions-grid py-5 bg-light">
         <div class="container">
-            <!-- Statua della Libertà -->
-            <div class="attraction-card">
-                <img src="{{ url_for('static', filename='images/statua liberta.jpg') }}" alt="Statua della Libertà">
-                <h3>Statua della Libertà</h3>
-                <p>Simbolo di libertà e di speranza, un must per ogni turista.</p>
-            </div>
-
-            <!-- Central Park -->
-            <div class="attraction-card">
-                <img src="{{ url_for('static', filename='images/centralpark.jpg') }}" alt="Central Park">
-                <h3>Central Park</h3>
-                <p>Un polmone verde nel cuore di Manhattan, ideale per una passeggiata rilassante.</p>
-            </div>
-
-            <!-- Times Square -->
-            <div class="attraction-card">
-                <img src="{{ url_for('static', filename='images/timesquare.jpg') }}" alt="Times Square">
-                <h3>Times Square</h3>
-                <p>Famoso per le sue luci al neon e l'energia che si respira.</p>
-            </div>
-
-            <!-- Empire State Building -->
-            <div class="attraction-card">
-                <img src="{{ url_for('static', filename='images/empirestate.jpg') }}" alt="Empire State Building">
-                <h3>Empire State Building</h3>
-                <p>Una delle strutture più iconiche, da cui godere una vista mozzafiato della città.</p>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="attraction-card p-4 rounded shadow">
+                        <img src="{{ url_for('static', filename='images/statua liberta.jpg') }}" alt="Statua della Libertà" class="img-fluid rounded mb-3">
+                        <h3>Statua della Libertà</h3>
+                        <p>Simbolo di libertà e di speranza, un must per ogni turista.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="attraction-card p-4 rounded shadow">
+                        <img src="{{ url_for('static', filename='images/centralpark.jpg') }}" alt="Central Park" class="img-fluid rounded mb-3">
+                        <h3>Central Park</h3>
+                        <p>Un polmone verde nel cuore di Manhattan, ideale per una passeggiata rilassante.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="attraction-card p-4 rounded shadow">
+                        <img src="{{ url_for('static', filename='images/timesquare.jpg') }}" alt="Times Square" class="img-fluid rounded mb-3">
+                        <h3>Times Square</h3>
+                        <p>Famoso per le sue luci al neon e l'energia che si respira.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="attraction-card p-4 rounded shadow">
+                        <img src="{{ url_for('static', filename='images/empirestate.jpg') }}" alt="Empire State Building" class="img-fluid rounded mb-3">
+                        <h3>Empire State Building</h3>
+                        <p>Una delle strutture più iconiche, da cui godere una vista mozzafiato della città.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
